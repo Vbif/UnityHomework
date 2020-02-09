@@ -13,6 +13,8 @@ public class Character : MonoBehaviour
     public float Radius;
 
     private State _state = State.Idle;
+    private Animator _animator;
+
     private Vector3 originalPosition;
     private Quaternion originalRotation;
 
@@ -24,6 +26,7 @@ public class Character : MonoBehaviour
     {
         originalPosition = transform.position;
         originalRotation = transform.rotation;
+        _animator = GetComponentInChildren<Animator>();
     }
 
     void FixedUpdate()
@@ -31,19 +34,26 @@ public class Character : MonoBehaviour
         switch (_state)
         {
             case State.Idle:
+                _animator.SetFloat("speed", 0);
                 transform.rotation = originalRotation;
                 break;
             case State.MoveForward:
+                _animator.SetFloat("speed", Speed);
                 if (Move(_targetPosition, _targetRadius))
                 {
-                    _state = State.MoveBackward;
+                    _state = State.Attack;
                 }
                 break;
             case State.Attack:
+                _animator.SetFloat("speed", 0);
+                _animator.SetTrigger("attack");
+                _state = State.WaitAttackCompelete;
                 break;
             case State.WaitAttackCompelete:
+                _animator.SetFloat("speed", 0);
                 break;
             case State.MoveBackward:
+                _animator.SetFloat("speed", Speed);
                 if (Move(originalPosition, 0))
                 {
                     _state = State.Idle;
@@ -96,5 +106,13 @@ public class Character : MonoBehaviour
         _target = target;
         _targetPosition = _target.transform.position;
         _targetRadius = c.Radius;
+    }
+
+    public void AttackComplete()
+    {
+        if (_state == State.WaitAttackCompelete)
+        {
+            _state = State.MoveBackward;
+        }
     }
 }
