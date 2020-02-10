@@ -18,4 +18,12 @@ public class CharacterAnimationEvents : MonoBehaviour
             _character.AttackComplete();
         }
     }
+
+    void AttackDoDamage()
+    {
+        if (_character != null)
+        {
+            _character.AttackDoDamage();
+        }
+    }
 }

@@ -6,7 +6,7 @@ public class Character : MonoBehaviour
 {
     public enum State
     {
-        Idle, MoveForward, Attack, WaitAttackCompelete, MoveBackward
+        Idle, MoveForward, Attack, WaitAttackCompelete, MoveBackward, Dead, WaitDead
     }
 
     public enum WeaponType
@@ -25,8 +25,10 @@ public class Character : MonoBehaviour
     private Quaternion originalRotation;
 
     private GameObject _target;
-    private float _targetRadius;
+    private Character _targetCharacter;
     private Vector3 _targetPosition;
+
+    public bool IsDead { get { return _state == State.Dead || _state == State.WaitDead; } }
 
     void Start()
     {
@@ -42,10 +44,11 @@ public class Character : MonoBehaviour
             case State.Idle:
                 _animator.SetFloat("speed", 0);
                 transform.rotation = originalRotation;
+                _animator.ResetTrigger("ressurect");
                 break;
             case State.MoveForward:
                 _animator.SetFloat("speed", Speed);
-                if (Move(_targetPosition, _targetRadius))
+                if (Move(_targetPosition, _targetCharacter.Radius))
                 {
                     _state = State.Attack;
                 }
@@ -76,6 +79,14 @@ public class Character : MonoBehaviour
                     _state = State.Idle;
                 }
                 break;
+            case State.Dead:
+                _animator.SetFloat("speed", 0);
+                _animator.SetTrigger("death");
+                _state = State.WaitDead;
+                break;
+            case State.WaitDead:
+                _animator.SetFloat("speed", 0);
+                break;
         }
     }
 
@@ -104,10 +115,20 @@ public class Character : MonoBehaviour
     {
         _state = State.Idle;
         _target = null;
+        _animator.ResetTrigger("death");
+        _animator.ResetTrigger("shoot");
+        _animator.ResetTrigger("attackBat");
+        _animator.ResetTrigger("attackHand");
+        _animator.SetTrigger("ressurect");
     }
 
     public void Attack(GameObject target)
     {
+        if (IsDead)
+        {
+            Debug.Log("Character is dead");
+            return;
+        }
         if (target == null)
         {
             Debug.Log("Cannot attack null object");
@@ -119,9 +140,14 @@ public class Character : MonoBehaviour
             Debug.Log("Cannot attack object without Character component");
             return;
         }
+        if (c.IsDead)
+        {
+            Debug.Log("Cannot attack already died enemy");
+            return;
+        }
         _target = target;
         _targetPosition = _target.transform.position;
-        _targetRadius = c.Radius;
+        _targetCharacter = c;
 
         if (Weapon == WeaponType.Gun)
         {
@@ -149,6 +175,30 @@ public class Character : MonoBehaviour
         else
         {
             Debug.Log("AttackComplete in wrong state");
+        }
+    }
+
+    public void AttackDoDamage()
+    {
+        if (_state == State.WaitAttackCompelete)
+        {
+            _targetCharacter.MakeDead();
+        }
+        else
+        {
+            Debug.Log("AttackDoDamage in wrong state");
+        }
+    }
+
+    public void MakeDead()
+    {
+        if (_state == State.Idle)
+        {
+            _state = State.Dead;
+        }
+        else
+        {
+            Debug.Log("Dont try to touch all buttons at once");
         }
     }
 }
