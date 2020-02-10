@@ -45,4 +45,14 @@ public class Initialization : MonoBehaviour
     {
         AttackOne(PoliceMan, Hooligan);
     }
+
+    public void AttackPoliceMan0()
+    {
+        AttackOne(Hooligan, PoliceMan);
+    }
+
+    public void AttackPoliceMan1()
+    {
+        AttackOne(Zombie, PoliceMan);
+    }
 }

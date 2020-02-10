@@ -9,8 +9,14 @@ public class Character : MonoBehaviour
         Idle, MoveForward, Attack, WaitAttackCompelete, MoveBackward
     }
 
+    public enum WeaponType
+    {
+        Gun, Bat, Hand
+    }
+
     public float Speed;
     public float Radius;
+    public WeaponType Weapon;
 
     private State _state = State.Idle;
     private Animator _animator;
@@ -46,7 +52,18 @@ public class Character : MonoBehaviour
                 break;
             case State.Attack:
                 _animator.SetFloat("speed", 0);
-                _animator.SetTrigger("attack");
+                if (Weapon == WeaponType.Gun)
+                {
+                    _animator.SetTrigger("shoot");
+                }
+                else if (Weapon == WeaponType.Bat)
+                {
+                    _animator.SetTrigger("attackBat");
+                }
+                else
+                {
+                    _animator.SetTrigger("attackHand");
+                }
                 _state = State.WaitAttackCompelete;
                 break;
             case State.WaitAttackCompelete:
@@ -102,17 +119,36 @@ public class Character : MonoBehaviour
             Debug.Log("Cannot attack object without Character component");
             return;
         }
-        _state = State.MoveForward;
         _target = target;
         _targetPosition = _target.transform.position;
         _targetRadius = c.Radius;
+
+        if (Weapon == WeaponType.Gun)
+        {
+            _state = State.Attack;
+        }
+        else
+        {
+            _state = State.MoveForward;
+        }
     }
 
     public void AttackComplete()
     {
         if (_state == State.WaitAttackCompelete)
         {
-            _state = State.MoveBackward;
+            if (Weapon == WeaponType.Gun)
+            {
+                _state = State.Idle;
+            }
+            else
+            {
+                _state = State.MoveBackward;
+            }
+        }
+        else
+        {
+            Debug.Log("AttackComplete in wrong state");
         }
     }
 }
