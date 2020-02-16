@@ -29,6 +29,7 @@ public class Character : MonoBehaviour
     private Vector3 _targetPosition;
 
     public bool IsDead { get { return _state == State.Dead || _state == State.WaitDead; } }
+    public bool IsIdle { get { return _state == State.Idle; } }
 
     void Start()
     {
@@ -115,11 +116,15 @@ public class Character : MonoBehaviour
     {
         _state = State.Idle;
         _target = null;
+
         _animator.ResetTrigger("death");
         _animator.ResetTrigger("shoot");
         _animator.ResetTrigger("attackBat");
         _animator.ResetTrigger("attackHand");
         _animator.SetTrigger("ressurect");
+
+        transform.position = originalPosition;
+        transform.rotation = originalRotation;
     }
 
     public void Attack(GameObject target)

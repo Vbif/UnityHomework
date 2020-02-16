@@ -153,10 +153,10 @@ RectTransform:
   m_Father: {fileID: 1848293511}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 100, y: -15}
+  m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1480651
 MonoBehaviour:
@@ -292,12 +292,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 62642105}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &98571941 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5146566564566733808, guid: a61925b16a39548c7ba344c43eaa2f6a,
+--- !u!114 &98571942 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8973757723782102965, guid: a61925b16a39548c7ba344c43eaa2f6a,
     type: 3}
   m_PrefabInstance: {fileID: 1863648835}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb686125221484d3391e06e22232278b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100268975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -361,12 +367,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 100268975}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &122589129 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8260009348246248638, guid: 4b30b685f961f4170b382a7d13adca14,
+--- !u!114 &122589130 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5279349757621022971, guid: 4b30b685f961f4170b382a7d13adca14,
     type: 3}
   m_PrefabInstance: {fileID: 122884315}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb686125221484d3391e06e22232278b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &122884315
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -559,7 +571,7 @@ GameObject:
   - component: {fileID: 217104874}
   - component: {fileID: 217104873}
   m_Layer: 5
-  m_Name: AttackPoliceMan0
+  m_Name: AttackRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -580,9 +592,9 @@ RectTransform:
   m_Father: {fileID: 606270581}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -473, y: -230.2}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -102, y: 16}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &217104873
@@ -629,7 +641,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 943346221}
-        m_MethodName: AttackPoliceMan0
+        m_MethodName: AttackSomeone
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -738,12 +750,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 359573443}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &393238249 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1658661300126210683, guid: ef2833c3b95954acfb84496abaf44539,
+--- !u!114 &393238250 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3234087787110200894, guid: ef2833c3b95954acfb84496abaf44539,
     type: 3}
   m_PrefabInstance: {fileID: 455563698}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb686125221484d3391e06e22232278b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &455563698
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -881,7 +899,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Attack Hooligan -> PoliceMan
+  m_Text: Attack someone
 --- !u!222 &477430403
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1064,7 +1082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1108,7 +1126,6 @@ RectTransform:
   m_Children:
   - {fileID: 867072250}
   - {fileID: 217104872}
-  - {fileID: 1258670029}
   - {fileID: 1848293511}
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -1507,7 +1524,7 @@ GameObject:
   - component: {fileID: 867072252}
   - component: {fileID: 867072251}
   m_Layer: 5
-  m_Name: AttackHooligan
+  m_Name: AttackLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1528,9 +1545,9 @@ RectTransform:
   m_Father: {fileID: 606270581}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -473, y: -262.2}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 100, y: 16}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &867072251
@@ -1577,7 +1594,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 943346221}
-        m_MethodName: AttackHooligan
+        m_MethodName: AttackSomeone
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1686,83 +1703,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 881225809}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &926506804
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 926506805}
-  - component: {fileID: 926506807}
-  - component: {fileID: 926506806}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &926506805
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 926506804}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1258670029}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &926506806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 926506804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Attack Zombie -> PoliceMan
---- !u!222 &926506807
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 926506804}
-  m_CullTransparentMesh: 0
 --- !u!1001 &932251555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1837,7 +1777,7 @@ GameObject:
   - component: {fileID: 943346222}
   - component: {fileID: 943346221}
   m_Layer: 0
-  m_Name: Initialization
+  m_Name: GameLogic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1855,9 +1795,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b376dc8a1dc4a698ad7b26f9cba5bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PoliceMan: {fileID: 393238249}
-  Hooligan: {fileID: 98571941}
-  Zombie: {fileID: 122589129}
+  LeftSide:
+  - {fileID: 393238250}
+  RightSide:
+  - {fileID: 98571942}
+  - {fileID: 122589130}
+  LeftUI: {fileID: 867072249}
+  RightUI: {fileID: 217104871}
 --- !u!4 &943346222
 Transform:
   m_ObjectHideFlags: 0
@@ -2024,135 +1968,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1165926812}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1258670028
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1258670029}
-  - component: {fileID: 1258670032}
-  - component: {fileID: 1258670031}
-  - component: {fileID: 1258670030}
-  m_Layer: 5
-  m_Name: AttackPoliceMan1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1258670029
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1258670028}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 926506805}
-  m_Father: {fileID: 606270581}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -473, y: -197.9}
-  m_SizeDelta: {x: 200, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1258670030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1258670028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1258670031}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 943346221}
-        m_MethodName: AttackPoliceMan1
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1258670031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1258670028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1258670032
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1258670028}
-  m_CullTransparentMesh: 0
 --- !u!1001 &1341670133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2379,7 +2194,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Attack PoliceMan -> Hooligan
+  m_Text: Attack someone
 --- !u!222 &1556684158
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2406,7 +2221,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1848293511
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2420,11 +2235,11 @@ RectTransform:
   m_Children:
   - {fileID: 1480650}
   m_Father: {fileID: 606270581}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -473, y: -167}
+  m_AnchoredPosition: {x: -299, y: 178.9}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1848293512
