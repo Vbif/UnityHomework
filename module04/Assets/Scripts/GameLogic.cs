@@ -5,20 +5,20 @@ using UnityEngine;
 
 public class GameLogic : MonoBehaviour
 {
-    public Character[] LeftSide;
-    public Character[] RightSide;
-
     public GameObject LeftUI;
     public GameObject RightUI;
 
+    private Character[] LeftSide;
+    private Character[] RightSide;
     private bool _waitForClick = false;
 
-    public void Start()
+    public void SetCharacters(Character[] left, Character[] right)
     {
-        StartCoroutine(GameLoop());
+        LeftSide = left;
+        RightSide = right;
     }
 
-    public void Init()
+    public void Restart()
     {
         StopAllCoroutines();
 
@@ -32,7 +32,7 @@ public class GameLogic : MonoBehaviour
             c.Init();
         }
 
-        Start();
+        StartCoroutine(GameLoop());
     }
 
     public void AttackSomeone()

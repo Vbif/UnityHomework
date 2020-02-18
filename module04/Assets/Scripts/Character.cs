@@ -31,7 +31,7 @@ public class Character : MonoBehaviour
     public bool IsDead { get { return _state == State.Dead || _state == State.WaitDead; } }
     public bool IsIdle { get { return _state == State.Idle; } }
 
-    void Start()
+    void Awake()
     {
         originalPosition = transform.position;
         originalRotation = transform.rotation;
