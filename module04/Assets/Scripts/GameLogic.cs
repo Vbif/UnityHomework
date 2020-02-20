@@ -11,6 +11,7 @@ public class GameLogic : MonoBehaviour
     private Character[] LeftSide;
     private Character[] RightSide;
     private bool _waitForClick = false;
+    private ScreenLogic ScreenLogic;
 
     public void SetCharacters(Character[] left, Character[] right)
     {
@@ -31,6 +32,8 @@ public class GameLogic : MonoBehaviour
         {
             c.Init();
         }
+
+        ScreenLogic = GetComponent<ScreenLogic>();
 
         StartCoroutine(GameLoop());
     }
@@ -67,11 +70,19 @@ public class GameLogic : MonoBehaviour
     private void PlayerLost()
     {
         Debug.Log("PlayerLost");
+        if (ScreenLogic != null)
+        {
+            ScreenLogic.Lose();
+        }
     }
 
     private void PlayerWin()
     {
         Debug.Log("PlayerWin");
+        if (ScreenLogic != null)
+        {
+            ScreenLogic.Win();
+        }
     }
 
     private IEnumerator GameLoop()

@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PauseLogic : MonoBehaviour
+public class ScreenLogic : MonoBehaviour
 {
     public GameObject AllUI;
     public GameObject PauseScreen;
+    public GameObject LoseScreen;
+    public GameObject WinScreen;
     public LevelManager LevelManager;
 
     public void Pause()
@@ -47,6 +49,32 @@ public class PauseLogic : MonoBehaviour
         else
         {
             Debug.Log("This option not configured");
+        }
+    }
+
+    public void Win()
+    {
+        if (AllUI != null)
+        {
+            AllUI.SetActive(false);
+        }
+
+        if (WinScreen != null)
+        {
+            WinScreen.SetActive(true);
+        }
+    }
+
+    public void Lose()
+    {
+        if (AllUI != null)
+        {
+            AllUI.SetActive(false);
+        }
+
+        if (LoseScreen != null)
+        {
+            LoseScreen.SetActive(true);
         }
     }
 }

@@ -11,21 +11,21 @@ public class LevelCommonParams : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var logic = GetComponentInChildren<GameLogic>();
-        if (logic != null)
+        var gameLogic = GetComponentInChildren<GameLogic>();
+        if (gameLogic != null)
         {
-            logic.SetCharacters(LeftSide, RightSide);
-            logic.Restart();
+            gameLogic.SetCharacters(LeftSide, RightSide);
+            gameLogic.Restart();
         }
         else
         {
             Debug.LogError("GameLogic not found");
         }
 
-        var pauseLogic = GetComponentInChildren<PauseLogic>();
-        if (pauseLogic != null && LevelManager != null)
+        var screenLogic = GetComponentInChildren<ScreenLogic>();
+        if (screenLogic != null && LevelManager != null)
         {
-            pauseLogic.LevelManager = LevelManager;
+            screenLogic.LevelManager = LevelManager;
         }
     }
 
