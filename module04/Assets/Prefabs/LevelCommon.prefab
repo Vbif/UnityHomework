@@ -924,7 +924,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3423878200803130941}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2503883668740621186}
+        m_MethodName: ToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3423878200975204353
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,6 +1061,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LeftSide: []
   RightSide: []
+  LevelManager: {fileID: 0}
 --- !u!1 &3423878201109268324
 GameObject:
   m_ObjectHideFlags: 0
@@ -1554,6 +1566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllUI: {fileID: 3423878201372530416}
   PauseScreen: {fileID: 3423878201161676337}
+  LevelManager: {fileID: 0}
 --- !u!1 &3423878201666951800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,8 +1918,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

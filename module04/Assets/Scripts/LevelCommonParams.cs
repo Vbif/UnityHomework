@@ -6,6 +6,7 @@ public class LevelCommonParams : MonoBehaviour
 {
     public Character[] LeftSide;
     public Character[] RightSide;
+    public LevelManager LevelManager;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,12 @@ public class LevelCommonParams : MonoBehaviour
         else
         {
             Debug.LogError("GameLogic not found");
+        }
+
+        var pauseLogic = GetComponentInChildren<PauseLogic>();
+        if (pauseLogic != null && LevelManager != null)
+        {
+            pauseLogic.LevelManager = LevelManager;
         }
     }
 

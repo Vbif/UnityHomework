@@ -6,6 +6,7 @@ public class PauseLogic : MonoBehaviour
 {
     public GameObject AllUI;
     public GameObject PauseScreen;
+    public LevelManager LevelManager;
 
     public void Pause()
     {
@@ -35,5 +36,17 @@ public class PauseLogic : MonoBehaviour
         }
 
         Time.timeScale = 1;
+    }
+
+    public void ToMainMenu()
+    {
+        if (LevelManager != null)
+        {
+            LevelManager.LoadLevel("MainMenu");
+        }
+        else
+        {
+            Debug.Log("This option not configured");
+        }
     }
 }

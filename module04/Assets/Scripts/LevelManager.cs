@@ -8,6 +8,7 @@ public class LevelManager : MonoBehaviour
 {
     public Slider Slider;
     public float FakeTime;
+    public GameObject[] ObjectToDisable;
 
     private GameObject _main;
 
@@ -26,6 +27,10 @@ public class LevelManager : MonoBehaviour
     private IEnumerator LoadLevelAsync(string name)
     {
         _main.SetActive(true);
+        foreach (var go in ObjectToDisable)
+        {
+            go.SetActive(false);
+        }
 
         var loadResult = SceneManager.LoadSceneAsync(name);
 
@@ -34,7 +39,7 @@ public class LevelManager : MonoBehaviour
         while (loadResult.progress < 0.9f || timer < FakeTime)
         {
             Slider.value = Mathf.Min(loadResult.progress, timer / FakeTime);
-            timer += Time.deltaTime;
+            timer += Time.unscaledDeltaTime;
             yield return null;
         }
 
@@ -46,6 +51,6 @@ public class LevelManager : MonoBehaviour
         }
 
         _main.SetActive(false);
-        yield return null;
+        Destroy(gameObject);
     }
 }
