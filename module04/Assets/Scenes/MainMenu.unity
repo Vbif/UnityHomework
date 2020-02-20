@@ -2824,7 +2824,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1884337640}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 425306526}
+        m_MethodName: LoadLevel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Level2
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1884337640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3216,6 +3227,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8137691810320144729, guid: 4a160573ead084a408b3d8fab6484988,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8137691811755060033, guid: 4a160573ead084a408b3d8fab6484988,
         type: 3}
       propertyPath: ObjectToDisable.Array.size
@@ -3229,17 +3245,17 @@ PrefabInstance:
     - target: {fileID: 8137691811755060034, guid: 4a160573ead084a408b3d8fab6484988,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.154631
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8137691811755060034, guid: 4a160573ead084a408b3d8fab6484988,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.303385
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8137691811755060034, guid: 4a160573ead084a408b3d8fab6484988,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.804904
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8137691811755060034, guid: 4a160573ead084a408b3d8fab6484988,
         type: 3}
@@ -3285,6 +3301,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137691812084202741, guid: 4a160573ead084a408b3d8fab6484988,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137691812154087464, guid: 4a160573ead084a408b3d8fab6484988,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137691812166061078, guid: 4a160573ead084a408b3d8fab6484988,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a160573ead084a408b3d8fab6484988, type: 3}
