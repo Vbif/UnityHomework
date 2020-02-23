@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1801885795112379933}
   - component: {fileID: 212966135959568222}
   - component: {fileID: 1600536637882268994}
+  - component: {fileID: 4598828710430935561}
   m_Layer: 0
   m_Name: MainMenu
   m_TagString: Untagged
@@ -129,6 +130,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!225 &4598828710430935561
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974074181143968089}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2545617032807465685
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.1674744, g: 0.34117648, b: 0.16470589, a: 0.74509805}
+  m_Color: {r: 0.1674744, g: 0.3411765, b: 0.1647059, a: 0.7450981}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2683,7 +2696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2901961, g: 0.16580632, b: 0.16580632, a: 0.74509805}
+  m_Color: {r: 0.2901961, g: 0.1658063, b: 0.1658063, a: 0.7450981}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3025,6 +3038,7 @@ GameObject:
   - component: {fileID: 2352401581714371717}
   - component: {fileID: 4580738308816342097}
   - component: {fileID: 2653043565451700060}
+  - component: {fileID: 1998434389037985581}
   m_Layer: 0
   m_Name: LoseScreen
   m_TagString: Untagged
@@ -3126,6 +3140,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c10aa5c0138d493c975e2d9527e57a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1998434389037985581
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8235857054678550149}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2cc23ba4d2ae84bd78a6b15301fba3ef, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8503718354037378119
 GameObject:
   m_ObjectHideFlags: 0
@@ -3138,6 +3171,7 @@ GameObject:
   - component: {fileID: 5180335839690502000}
   - component: {fileID: 8302556254418295469}
   - component: {fileID: 6246792421984973973}
+  - component: {fileID: 3939099480399222460}
   m_Layer: 0
   m_Name: MainMenu
   m_TagString: Untagged
@@ -3255,6 +3289,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!225 &3939099480399222460
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8503718354037378119}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &9110565281846313334
 GameObject:
   m_ObjectHideFlags: 0
@@ -3268,6 +3314,7 @@ GameObject:
   - component: {fileID: 7242837598015184230}
   - component: {fileID: 1268399645419794674}
   - component: {fileID: 7586436850171126568}
+  - component: {fileID: 1573524832609189057}
   m_Layer: 0
   m_Name: WinScreen
   m_TagString: Untagged
@@ -3369,3 +3416,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c10aa5c0138d493c975e2d9527e57a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1573524832609189057
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9110565281846313334}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3b5558452247a4d7fb634bf65557fd73, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

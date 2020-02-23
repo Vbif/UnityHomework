@@ -2908,6 +2908,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1000330763002335400, guid: b435dda06e1cb4136bf166c597787999,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2938042944159205483, guid: b435dda06e1cb4136bf166c597787999,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -3181,6 +3186,11 @@ PrefabInstance:
     - target: {fileID: 8918465791870284108, guid: b435dda06e1cb4136bf166c597787999,
         type: 3}
       propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9110565281846313334, guid: b435dda06e1cb4136bf166c597787999,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
