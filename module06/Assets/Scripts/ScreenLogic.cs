@@ -5,9 +5,9 @@ using UnityEngine;
 public class ScreenLogic : MonoBehaviour
 {
     public GameObject AllUI;
-    public GameObject PauseScreen;
-    public GameObject LoseScreen;
-    public GameObject WinScreen;
+    public ScreenController PauseScreen;
+    public ScreenController LoseScreen;
+    public ScreenController WinScreen;
     public LevelManager LevelManager;
 
     public void Pause()
@@ -19,7 +19,7 @@ public class ScreenLogic : MonoBehaviour
 
         if (PauseScreen != null)
         {
-            PauseScreen.SetActive(true);
+            PauseScreen.Show();
         }
 
         Time.timeScale = 0;
@@ -34,7 +34,7 @@ public class ScreenLogic : MonoBehaviour
 
         if (PauseScreen != null)
         {
-            PauseScreen.SetActive(false);
+            PauseScreen.Hide();
         }
 
         Time.timeScale = 1;
@@ -61,7 +61,7 @@ public class ScreenLogic : MonoBehaviour
 
         if (WinScreen != null)
         {
-            WinScreen.SetActive(true);
+            WinScreen.Show();
         }
     }
 
@@ -74,7 +74,7 @@ public class ScreenLogic : MonoBehaviour
 
         if (LoseScreen != null)
         {
-            LoseScreen.SetActive(true);
+            LoseScreen.Show();
         }
     }
 }
