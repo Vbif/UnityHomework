@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class ButtonController : MonoBehaviour
 {
-    public void Play()
+    public void Show()
     {
-        GetComponent<Animator>().SetTrigger("Show");
+        GetComponent<Animator>().Play("show");
+    }
+
+    public void Hide()
+    {
+        GetComponent<Animator>().Play("hide");
     }
 }
