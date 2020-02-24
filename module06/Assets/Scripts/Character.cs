@@ -17,6 +17,7 @@ public class Character : MonoBehaviour
     public float Speed;
     public float Radius;
     public WeaponType Weapon;
+    public ParticleSystem OnAttackEffect;
 
     private State _state = State.Idle;
     private Animator _animator;
@@ -161,6 +162,11 @@ public class Character : MonoBehaviour
         else
         {
             _state = State.MoveForward;
+        }
+
+        if (OnAttackEffect != null)
+        {
+            OnAttackEffect.Play();
         }
     }
 
