@@ -7,6 +7,7 @@ public class LevelCommonParams : MonoBehaviour
     public Character[] LeftSide;
     public Character[] RightSide;
     public LevelManager LevelManager;
+    public AudioClip Music;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,11 @@ public class LevelCommonParams : MonoBehaviour
         if (screenLogic != null && LevelManager != null)
         {
             screenLogic.LevelManager = LevelManager;
+        }
+
+        if (Music != null && BackgroundMusic.Instance != null)
+        {
+            BackgroundMusic.Instance.ChangeMusic(Music);
         }
     }
 

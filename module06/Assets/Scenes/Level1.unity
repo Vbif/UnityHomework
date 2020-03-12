@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -2139,6 +2139,11 @@ PrefabInstance:
       propertyPath: LevelManager
       value: 
       objectReference: {fileID: 819420578}
+    - target: {fileID: 5954555997088365403, guid: b435dda06e1cb4136bf166c597787999,
+        type: 3}
+      propertyPath: Music
+      value: 
+      objectReference: {fileID: 8300000, guid: b1a61f65df2814a6c979d49a1a837bee, type: 3}
     - target: {fileID: 8823756649420446529, guid: b435dda06e1cb4136bf166c597787999,
         type: 3}
       propertyPath: m_textInfo.characterCount

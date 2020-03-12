@@ -52,5 +52,7 @@ public class LevelManager : MonoBehaviour
 
         _main.SetActive(false);
         Destroy(gameObject);
+
+        Time.timeScale = 1;
     }
 }
