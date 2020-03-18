@@ -24,6 +24,21 @@ PrefabInstance:
       propertyPath: Weapon
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6500634778580344686, guid: 74fb62fd83c88461ca41e89e18d2e219,
+        type: 3}
+      propertyPath: OnDeathAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 1948bfc7d0cf249bbada4634bcd75526, type: 3}
+    - target: {fileID: 6500634778580344686, guid: 74fb62fd83c88461ca41e89e18d2e219,
+        type: 3}
+      propertyPath: OnAttackAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: bda2d22ffa3394df983be6b40b96f985, type: 3}
+    - target: {fileID: 6500634778580344686, guid: 74fb62fd83c88461ca41e89e18d2e219,
+        type: 3}
+      propertyPath: OnAttackAudioDelay
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7049139455482983211, guid: 74fb62fd83c88461ca41e89e18d2e219,
         type: 3}
       propertyPath: m_Name

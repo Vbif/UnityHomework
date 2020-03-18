@@ -17,6 +17,12 @@ public class ScreenController : MonoBehaviour
     {
         gameObject.SetActive(true);
         TriggerAnimation("Show");
+
+        var sound = GetComponent<AudioSource>();
+        if (sound != null)
+        {
+            sound.Play();
+        }
     }
 
     public void Hide()

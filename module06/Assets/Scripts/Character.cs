@@ -18,9 +18,14 @@ public class Character : MonoBehaviour
     public float Radius;
     public WeaponType Weapon;
     public ParticleSystem OnAttackEffect;
+    public AudioClip OnAttackAudio;
+    public float OnAttackAudioDelay;
+    public AudioClip OnDeathAudio;
+    public float OnDeathAudioDelay;
 
     private State _state = State.Idle;
     private Animator _animator;
+    private AudioSource[] _audioSources;
 
     private Vector3 originalPosition;
     private Quaternion originalRotation;
@@ -37,6 +42,7 @@ public class Character : MonoBehaviour
         originalPosition = transform.position;
         originalRotation = transform.rotation;
         _animator = GetComponentInChildren<Animator>();
+        _audioSources = GetComponents<AudioSource>();
     }
 
     void FixedUpdate()
@@ -57,6 +63,7 @@ public class Character : MonoBehaviour
                 break;
             case State.Attack:
                 _animator.SetFloat("speed", 0);
+
                 if (Weapon == WeaponType.Gun)
                 {
                     _animator.SetTrigger("shoot");
@@ -69,6 +76,18 @@ public class Character : MonoBehaviour
                 {
                     _animator.SetTrigger("attackHand");
                 }
+
+                if (OnAttackEffect != null)
+                {
+                    OnAttackEffect.Play();
+                }
+
+                if (OnAttackAudio != null && _audioSources.Length > 0)
+                {
+                    _audioSources[0].clip = OnAttackAudio;
+                    _audioSources[0].PlayDelayed(OnAttackAudioDelay);
+                }
+
                 _state = State.WaitAttackCompelete;
                 break;
             case State.WaitAttackCompelete:
@@ -163,11 +182,6 @@ public class Character : MonoBehaviour
         {
             _state = State.MoveForward;
         }
-
-        if (OnAttackEffect != null)
-        {
-            OnAttackEffect.Play();
-        }
     }
 
     public void AttackComplete()
@@ -194,6 +208,12 @@ public class Character : MonoBehaviour
         if (_state == State.WaitAttackCompelete)
         {
             _targetCharacter.MakeDead();
+
+            if (OnDeathAudio != null && _audioSources.Length > 1)
+            {
+                _audioSources[1].clip = OnDeathAudio;
+                _audioSources[1].PlayDelayed(OnDeathAudioDelay);
+            }
         }
         else
         {
