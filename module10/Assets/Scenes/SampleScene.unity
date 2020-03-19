@@ -1573,7 +1573,7 @@ Tilemap:
       - {fileID: 21300000, guid: c8db2ccc4e419ea4aac7a6d44fefcf39, type: 3}
       - {fileID: 21300000, guid: 3329571b1b8c0d34b83f9175eec19727, type: 3}
       - {fileID: 21300000, guid: 2b9c729e026b0514b8dde1680d8a7e90, type: 3}
-      m_AnimationSpeed: 10
+      m_AnimationSpeed: 10.000001
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -3, y: -6, z: 0}
@@ -1642,7 +1642,7 @@ Tilemap:
       - {fileID: 21300000, guid: c8db2ccc4e419ea4aac7a6d44fefcf39, type: 3}
       - {fileID: 21300000, guid: 3329571b1b8c0d34b83f9175eec19727, type: 3}
       - {fileID: 21300000, guid: 2b9c729e026b0514b8dde1680d8a7e90, type: 3}
-      m_AnimationSpeed: 10
+      m_AnimationSpeed: 10.000001
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 0, y: -6, z: 0}
@@ -2062,7 +2062,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 909668612}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: d5029f48bf7fd7746a514c73ba158a93, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -2134,7 +2134,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 938712747}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: c3fd001713b385945b3a848225559e58, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
