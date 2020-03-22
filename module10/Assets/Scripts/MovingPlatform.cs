@@ -14,6 +14,12 @@ public class MovingPlatform : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameLogic.Instance.OnInit += Init;
+        Init();
+    }
+
+    public void Init()
+    {
         current = 0.0f;
         index = 0;
     }

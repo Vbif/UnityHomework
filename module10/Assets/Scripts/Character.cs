@@ -14,13 +14,27 @@ public class Character : MonoBehaviour
     Animator animator;
     float visualDirection;
 
+    private Vector3 initPosition;
+
     // Start is called before the first frame update
     void Start()
     {
-        visualDirection = 1.0f;
+        initPosition = transform.position;
+        GameLogic.Instance.OnInit += Init;
+
         rigidBody2D = GetComponent<Rigidbody2D>();
         triggerDetector = GetComponentInChildren<TriggerDetector>();
         animator = GetComponentInChildren<Animator>();
+
+        Init();
+    }
+
+    public void Init()
+    {
+        visualDirection = 1.0f;
+        transform.position = initPosition;
+        rigidBody2D.velocity = new Vector2(0, 0);
+       
     }
 
     public void MoveLeft()
@@ -57,7 +71,7 @@ public class Character : MonoBehaviour
         {
             MoveRight();
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
             Jump();
         }

@@ -8,7 +8,18 @@ public class TriggerDetector : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        InTrigger = true;
+        if (collision.tag == "Death")
+        {
+            GameLogic.Death();
+        }
+        else if (collision.tag == "Win")
+        {
+            GameLogic.Win();
+        }
+        else
+        {
+            InTrigger = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
